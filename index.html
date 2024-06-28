@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #122977;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 36px;
+        }
+        h4{
+            text-align: center;
+            color: #122977;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            background-color: #122977;
+            color: #fff;
+            padding: 10px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 150px;
+            margin-right: 10px;
+            color: #000;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #00000080;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+            padding: 10px;
+        }
+        .form-inline {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .form-inline .form-group {
+            flex: 1;
+        }
+        .form-inline .form-group.flex-group {
+            flex: 2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #046197;
+        }
+        th{
+            padding: 20px;
+            text-align: center;
+        }
+        td {
+            padding: 20px;
+            text-align: left;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .signature input {
+            width: 350px;
+            border: none;
+            border-bottom: 1px solid #000;
+            padding: 5px;
+        }
+        .terms {
+            font-size: 16px;
+            color: #0384da;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application Form</h1> 
+        <h4>Shahroze Ayyaz Khan (102440)</h4>      
+        <div class="section">
+            <h2>A. General Questions</h2>
+            <div class="form-group">
+                <label for="name">Proposed Insured's Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="birthdate">Birth Date:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+                <div class="form-group flex-group">
+                    <label>Gender:</label>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="id">ID Number:</label>
+                    <input type="text" id="id" name="id">
+                </div>
+                <div class="form-group">
+                    <label for="ssn">Social Security Number:</label>
+                    <input type="text" id="ssn" name="ssn">
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group flex-group">
+                    <label>Status:</label>
+                    <label><input type="radio" name="status" value="single"> Single</label>
+                    <label><input type="radio" name="status" value="married"> Married</label>
+                    <label><input type="radio" name="status" value="divorced"> Divorced</label>
+                    <label><input type="radio" name="status" value="others"> Others</label>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="occupation">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation">
+                </div>
+                <div class="form-group flex-group">
+                    <label>Are you a retiree?</label>
+                    <label><input type="radio" name="retiree" value="yes"> Yes</label>
+                    <label><input type="radio" name="retiree" value="no"> No</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>B. Type of Health Coverage</h2>
+            <table>
+                <tr>
+                    <td><label>Employee:</label>
+                    <label><input type="checkbox" name="employee" value="yes"> Yes</label>
+                    <label><input type="checkbox" name="employee" value="no"> No</label>
+                    <br>
+                    <label>Plan Choice</label></td>
+                    <td><label>Spouse:</label>
+                    <label><input type="checkbox" name="spouse" value="yes"> Yes</label>
+                    <label><input type="checkbox" name="spouse" value="no"> No</label>
+                    <br>
+                    <label>Plan Choice</label></td>
+                    <td><label>Children:</label>
+                    <label><input type="checkbox" name="children" value="yes"> Yes</label>
+                    <label><input type="checkbox" name="children" value="no"> No</label>
+                    <br>
+                    <label>Plan Choice</label></td>
+                </tr>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>SSN No.</th>
+                        <th>Relationship to Proposed Insured</th>
+                        <th>Birth Date</th>
+                        <th>Age</th>
+                        <th>Sex</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>C. The Policy</h2>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="units">Units:</label>
+                    <input type="text" id="units" name="units">
+                </div>
+                <div class="form-group">
+                    <label for="annual-premium">Annual Premium:</label>
+                    <input type="text" id="annual-premium" name="annual-premium">
+                </div>
+            </div>
+            <div class="form-group flex-group">
+                <label>Payment Mode:</label>
+                <label><input type="radio" name="payment-mode" value="annual"> Annual</label>
+                <label><input type="radio" name="payment-mode" value="semi-annual"> Semi-Annual</label>
+                <label><input type="radio" name="payment-mode" value="monthly"> Monthly PAT (Complete PAT card)</label>
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="cash">Cash with Application:</label>
+                    <input type="text" id="cash" name="cash">
+                </div>
+                <div class="form-group">
+                    <label for="planned-premium">Planned Modal Premium:</label>
+                    <input type="text" id="planned-premium" name="planned-premium">
+                </div>
+            </div>
+            <div class="terms">
+                <p><strong>Terms & Conditions:</strong> Improvement should be measured regularly and assessed in order for you to know what's beneficial and what is not. This will help you set new targets.</p>
+            </div>
+            <div class="signature">
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature">
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
